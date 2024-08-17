@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Questions & Answers - C Language</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .credit a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .credit a:hover {
+            color: #ddd;
+        }
+
+        /* Question & Answer Section */
+        .question-answer {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-answer h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .description {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .code-block {
+            background: #f8f8f8;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-family: monospace;
+            overflow-x: auto; /* Allows horizontal scrolling */
+        }
+
+        .code-block pre {
+            margin: 0;
+            white-space: pre-wrap; /* Allows wrapping of long lines */
+            word-wrap: break-word; /* Breaks long words */
+        }
+
+        .solution h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+
+        .solution p {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Programming Questions & Answers</h1>
+            <p class="credit">by <a href="https://avishekojha.com.np" target="_blank">Avishek Ojha</a></p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="question-answer">
+            <h2>Question 1: WAP to read a number and find even or odd</h2>
+            <p class="description">This program reads a number from the user and determines if it is even or odd.</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int num, rem;
+    printf("Kripaya Number Halnuhos:");
+    scanf("%d", &num);
+    rem = num % 2;
+    if (rem == 0) {
+        printf("Even ho yo number");
+    } else {
+        printf("Odd ho yo number");
+    }
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="question-answer">
+            <h2>Question 2: WAP input any two numbers and display the largest one</h2>
+            <p class="description">This program reads two numbers from the user and displays the largest one.</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int num1, num2;
+    printf("first number halnuhos: ");
+    scanf("%d", &num1);
+    printf("second number halnuhos: ");
+    scanf("%d", &num2);
+    if (num1 > num2) {
+        printf("The largest number is: %d\n", num1);
+    } else if (num2 > num1) {
+        printf("The largest number is: %d\n", num2);
+    } else {
+        printf("Both numbers are equal.\n");
+    }
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="question-answer">
+            <h2>Question 3: WAP to find the largest number among three input numbers</h2>
+            <p class="description">This program reads three numbers from the user and determines the largest one.</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int num1, num2, num3;
+    printf("pahilo number halnuhos: ");
+    scanf("%d", &num1);
+    printf("doshro number halnuhos: ");
+    scanf("%d", &num2);
+    printf("teshro number halnuhos: ");
+    scanf("%d", &num3);
+    if (num1 > num2 && num1 > num3) {
+        printf("The largest number is: %d\n", num1);
+    } else if (num2 > num1 && num2 > num3) {
+        printf("The largest number is: %d\n", num2);
+    } else if (num3 > num1 && num3 > num2) {
+        printf("The largest number is: %d\n", num3);
+    } else {
+        printf("All numbers are equal.\n");
+    }
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="question-answer">
+            <h2>Question 4: WAP which reads any two integer values from user and calculates sum, difference, and product using switch case statement</h2>
+            <p class="description">This program reads two integers from the user and calculates their sum, difference, or product based on the user's choice using a switch case statement.</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int num1, num2, choice;
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    printf("Choose an operation:\n");
+    printf("1. Sum\n");
+    printf("2. Difference\n");
+    printf("3. Product\n");
+    printf("Enter your choice (1/2/3): ");
+    scanf("%d", &choice);
+    switch (choice) {
+        case 1:
+            printf("The sum of %d and %d is: %d\n", num1, num2, num1 + num2);
+            break;
+        case 2:
+            printf("The difference of %d and %d is: %d\n", num1, num2, num1 - num2);
+            break;
+        case 3:
+            printf("The product of %d and %d is: %d\n", num1, num2, num1 * num2);
+            break;
+        default:
+            printf("Invalid choice. Please choose a valid operation (1/2/3).\n");
+    }
+    return 0;
+}</code></pre>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 <a href="https://avishekojha.com.np" target="_blank">Avishek Ojha</a>. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
